@@ -1,6 +1,9 @@
 function fn() {
   var env = karate.env; // get system property 'karate.env'
   karate.log('karate.env system property was:', env);
+  karate.configure('report',{
+    pathToLogo: 'ptm-co.png'
+  })
   if (!env) {
     env = 'dev';
   }
