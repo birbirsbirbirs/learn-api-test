@@ -59,4 +59,6 @@ Feature: parameterized test
     * print 'locaDateTime at America/New_York: ' + myLocalDateTimeAtNewYork.format(formatterNewYorkTime)
     * def delhiTimeZone = ZoneId.of('Asia/Calcutta')
     * def myLocalDateTimeAtDelhi = LocalDateTime.now(delhiTimeZone)
-    * print 'localDatetime in delhi, india: '+ myLocalDateTimeAtDelhi
+    * def formatterDelhiTime = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss a")
+    * def formattedMyLocalDateTimeAtDelhi = myLocalDateTimeAtDelhi.format(formatterDelhiTime)
+    * print 'localDatetime in delhi, india: '+ formattedMyLocalDateTimeAtDelhi
