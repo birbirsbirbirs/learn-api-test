@@ -34,6 +34,7 @@ Feature: parameterized test
     * def datePatternyyyyyMMdd = DateTimeFormatter.ofPattern("yyyy/MM/dd")
     * def formatDateSecond = date.format(datePatternyyyyyMMdd)
     * print 'yyyy/MM/dd: ' + formatDateSecond
+#    EEEE will print day of the week
     * def datePatternEEEE = DateTimeFormatter.ofPattern("EEEE")
     * def formatDateThird = date.format(datePatternEEEE)
     * print 'EEEE: ' + formatDateThird
