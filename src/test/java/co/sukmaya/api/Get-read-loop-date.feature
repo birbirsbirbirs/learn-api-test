@@ -5,7 +5,7 @@ Feature: parameterized test
     * def csvJson = read("../files/expectedUser.csv")
 
   Scenario: loop scenario to test data
-    * karate.forEach(csvJson, function(item){ karate.call('Get-parameterized.feature@repeatedScenario',item) })
+    * karate.forEach(csvJson, function(item){ karate.call('Get-read-loop-date.feature@repeatedScenario',item) })
 
   @repeatedScenario @ignore
   Scenario: test each data
