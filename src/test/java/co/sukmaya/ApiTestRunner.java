@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class ApiTestRunner {
     @Test
     void testApi() {
-        Results results = Runner.path("classpath:co/sukmaya/api").tags("@api")
+        Results results = Runner.path("classpath:co/sukmaya/api") //.tags("@api")
                 .outputCucumberJson(true)
                 .parallel(20);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
