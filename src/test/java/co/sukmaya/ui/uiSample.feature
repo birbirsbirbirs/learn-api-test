@@ -19,18 +19,18 @@ Feature: validating ui browser launch
     Then input("//*[@id='sb_form_q']",Key.ENTER)
     Then delay(5000)
 
-    Scenario: find the link
-      Given driver baseurl
-      Then delay(2000)
-      Then click('{a:1}Images')
-      Then delay(5000)
+  Scenario: find the link
+    Given driver baseurl
+    Then delay(2000)
+    Then click('{a:1}Images')
+    Then delay(5000)
 
-      Scenario: click box in login.salesforce.com
-        Given driver 'https://login.salesforce.com/'
-        Then delay(2000)
-        And maximize()
-        Then delay(2000)
-        Then leftOf("//label[@for='rememberUn']").click()
-        Then delay(2000)
-        Then click("//*[@id='forgot_password_link']")
-        Then delay(5000)
+  Scenario: click box in login.salesforce.com
+    Given driver 'https://login.salesforce.com/'
+    Then delay(2000)
+    And maximize()
+    Then delay(2000)
+    Then leftOf("//label[@for='rememberUn']").click()
+    Then delay(2000)
+    Then click("//*[@id='forgot_password_link']")
+    Then delay(5000)
