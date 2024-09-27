@@ -12,7 +12,7 @@ public class UiTestRunner {
     void testApi() {
         Results results = Runner.path("classpath:co/sukmaya/ui") //.tags("@api")
                 .outputCucumberJson(true)
-                .parallel(50);
+                .parallel(1);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 }

@@ -22,7 +22,7 @@ Feature: validating ui browser launch
   Scenario: find the link
     Given driver baseurl
     Then delay(2000)
-    Then click('{a:1}Images')
+    Then click('{a:0}Images')
     Then delay(5000)
 
   Scenario: click box in login.salesforce.com
