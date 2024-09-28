@@ -4,6 +4,6 @@ Feature: test kdt1 spring boot application
     * url 'http://localhost:8080'
 
   Scenario: get hero
-    Given path '/api/hero'
+    Given path '/hero'
     When method get
-    Then Status 200
+    Then status 200

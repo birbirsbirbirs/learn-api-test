@@ -93,7 +93,7 @@
                         <configuration>
                             <simulationsFolder>src/test/java</simulationsFolder>
                             <includes>
-                                <include>co.sukmaya.perf.TodoSimulation</include>
+                                <include>co.sukmaya.HeroPerfSimulation</include>
                             </includes>
                         </configuration>
                         <executions>

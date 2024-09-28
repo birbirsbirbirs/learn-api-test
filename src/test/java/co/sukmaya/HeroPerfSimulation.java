@@ -1,4 +1,4 @@
-package co.sukmaya.perf;
+package co.sukmaya;
 
 import com.intuit.karate.gatling.javaapi.KarateProtocolBuilder;
 import io.gatling.javaapi.core.ScenarioBuilder;
@@ -8,18 +8,18 @@ import static com.intuit.karate.gatling.javaapi.KarateDsl.*;
 import static io.gatling.javaapi.core.CoreDsl.rampUsers;
 import static io.gatling.javaapi.core.CoreDsl.scenario;
 
-public class TodoSimulation extends Simulation {
+public class HeroPerfSimulation extends Simulation {
 
-    public TodoSimulation() {
+    public HeroPerfSimulation() {
 
         KarateProtocolBuilder protocol = karateProtocol(
-                uri("/api/todos/{id}").nil()
+                uri("/hero").nil()
         );
 
         ScenarioBuilder main = scenario("main").exec(karateFeature("classpath:co/sukmaya/api/Get-ktd1.feature"));
 
         setUp(
-                main.injectOpen(rampUsers(10).during(5)).protocols(protocol)
+                main.injectOpen(rampUsers(100).during(5)).protocols(protocol)
         );
     }
 
